@@ -155,14 +155,11 @@ class AlbumsHandler {
 
   async postUploadAlbumCoverHandler(request, h) {
     try {
-      const { coverUrl } = request.payload;
+      const { cover } = request.payload;
       const { id } = request.params;
-      this._validator.validateImageHeaders(coverUrl.hapi.headers);
+      this._validator.validateImageHeaders(cover.hapi.headers);
 
-      const filename = await this._storageService.writeFile(
-        coverUrl,
-        cover.hapi
-      );
+      const filename = await this._storageService.writeFile(cover, cover.hapi);
 
       const fileLocation = `http://${process.env.HOST}:${process.env.PORT}/upload/images/${filename}`;
 
