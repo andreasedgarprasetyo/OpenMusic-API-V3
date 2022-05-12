@@ -53,8 +53,6 @@ class PlaylistsService {
 
     const result = await this._pool.query(query);
 
-    console.log();
-
     return result.rows;
   }
 
