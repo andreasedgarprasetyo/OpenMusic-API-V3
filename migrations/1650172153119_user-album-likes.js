@@ -1,3 +1,5 @@
+/* eslint-disable comma-dangle */
+/* eslint-disable quotes */
 /* eslint-disable camelcase */
 
 exports.shorthands = undefined;

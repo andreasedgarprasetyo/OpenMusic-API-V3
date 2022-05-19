@@ -1,3 +1,5 @@
+/* eslint-disable comma-dangle */
+/* eslint-disable quotes */
 exports.up = (pgm) => {
   pgm.createTable("playlist_song_activities", {
     id: {

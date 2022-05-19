@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 /* eslint-disable camelcase */
 
 exports.shorthands = undefined;
